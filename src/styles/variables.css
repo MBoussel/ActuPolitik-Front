@@ -1,0 +1,42 @@
+/**
+ * Variables CSS globales
+ */
+
+:root {
+      /* Fonts */
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Couleurs */
+  --primary-gradient: linear-gradient(135deg, #2f46ae 0%, #6c12c7 100%);
+  --primary-color: #203aae;
+  --primary-dark: #764ba2;
+  
+  --bg-white: #ffffff;
+  --bg-light: #f8f9fa;
+  --bg-lighter: #f5f5f5;
+  
+  --text-dark: #333;
+  --text-medium: #666;
+  --text-light: #999;
+  
+  --border-color: #e0e0e0;
+  --border-light: #f0f0f0;
+  
+  --error-color: #e74c3c;
+  
+  /* Ombres */
+  --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.3);
+  --shadow-small: 0 4px 12px rgba(102, 126, 234, 0.3);
+  --shadow-hover: 0 8px 20px rgba(102, 126, 234, 0.4);
+  
+  /* Bordures */
+  --radius-large: 24px;
+  --radius-medium: 16px;
+  --radius-small: 12px;
+  --radius-tiny: 8px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

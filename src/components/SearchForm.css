@@ -1,0 +1,195 @@
+.search-form-container {
+  background: var(--bg-white);
+  border-radius: var(--radius-large);
+  box-shadow: var(--shadow-medium);
+  animation: fadeInUp 0.6s ease-out;
+  overflow: hidden; /* Important pour que l'image ne dépasse pas */
+}
+
+/* Hero banner en haut */
+.hero-banner {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Contenu du formulaire avec padding */
+.form-content {
+  padding: 3rem;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-family: var(--font-title); /* ← Montserrat */
+  font-size: 3.5rem; /* Un peu plus grand */
+  font-weight: 900; /* Extra bold */
+  letter-spacing: -0.02em; /* Légèrement resserré */
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase; /* MAJUSCULES pour plus d'impact */
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-medium);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.examples-label {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  font-weight: 600; /* Un peu plus bold */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.search-form {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-small);
+  outline: none;
+  transition: all var(--transition-normal);
+  font-family: inherit;
+}
+
+.search-input:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+}
+
+.search-input:disabled {
+  background: var(--bg-lighter);
+  cursor: not-allowed;
+}
+
+.search-button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--primary-gradient);
+  color: white;
+  border: none;
+  border-radius: var(--radius-small);
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  white-space: nowrap;
+}
+
+.search-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+}
+
+.search-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.search-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Exemples */
+.examples {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.examples-label {
+  font-size: 0.9rem;
+  color: var(--text-medium);
+  font-weight: 500;
+}
+
+.example-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: var(--bg-lighter);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-tiny);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  color: var(--text-dark);
+}
+
+.example-button:hover:not(:disabled) {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-1px);
+}
+
+.example-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 180px;
+  }
+
+  .form-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-banner {
+    height: 150px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}
