@@ -6,7 +6,7 @@
 import axios, { AxiosError } from 'axios';
 import type { SummaryResponse, HealthResponse, ApiResult, ApiError } from '../types';
 
-const API_BASE_URL = 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_URL ;
 
 /**
  * Appelle l'API pour générer un résumé d'actualité

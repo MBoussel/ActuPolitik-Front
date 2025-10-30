@@ -69,13 +69,22 @@ src/
 - Messages d'erreur clairs en français
 
 ## Configuration
-
-Le backend doit tourner sur `http://localhost:8000`
-
-Pour changer l'URL de l'API, éditer `src/services/api.ts` :
-```typescript
-const API_BASE_URL = 'http://localhost:8000';
+Créer un fichier `.env` à la racine :
+```bash
+cp .env.example .env
 ```
+
+Variables disponibles :
+
+| Variable | Description 
+|----------|-------------
+| `VITE_API_URL` | URL du backend API 
+
+**Exemple pour production :**
+```env
+VITE_API_URL=https://api.actupolitik.fr
+```
+
 
 ## Build de production
 ```bash
